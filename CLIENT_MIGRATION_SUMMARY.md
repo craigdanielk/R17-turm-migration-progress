@@ -68,6 +68,30 @@ Collection Migration
 
 
 
+Phase 8: Product–Collection Mapping  
+
+Status: Complete  
+
+Notes:  
+
+- 265 Shopify products mapped to Magento products by SKU (100% match rate)  
+
+- 177 products with valid Magento category mappings assigned to their collections  
+
+- 88 products correctly identified as having no collection in Magento  
+
+- Single product skipped: `espresso-1000g` (no collection defined in Magento source data)  
+
+- Mapping integrity verified through deterministic SKU-based resolution  
+
+- Final mapping validated; system now structurally accurate  
+
+---  
+
+Phase 9:
+
+
+
 Theme Analysis
 
 	•	Theme fully analysed

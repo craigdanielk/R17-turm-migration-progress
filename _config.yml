@@ -1,0 +1,11 @@
+theme: jekyll-theme-primer
+markdown: kramdown
+title: "R17 Turm Kaffee Migration Progress"
+description: "Live updates of the Magento → Shopify migration"
+show_downloads: false
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+

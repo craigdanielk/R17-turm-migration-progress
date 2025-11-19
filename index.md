@@ -1,38 +1,99 @@
-Turm Kaffee – Migration Documentation Hub
+---
+title: "Turm Kaffee Migration Progress"
+---
 
-Welcome to the documentation hub for the Magento → Shopify migration.
+# Turm Kaffee: Magento → Shopify Migration  
 
-
-
-Available Documents
-
-
-
-Client-Facing Summary
+Live technical and operational progress reporting.
 
 
 
-CLIENT_MIGRATION_SUMMARY.md￼
+## Navigation
+
+- [Client Summary](./CLIENT_MIGRATION_SUMMARY.md)
+
+- [Internal Migration Report](./INTERNAL_TECH_MIGRATION_PROGRESS.md)
 
 
 
-Internal Technical Progress
+---
 
 
 
-INTERNAL_TECH_MIGRATION_PROGRESS.md￼
+# Phase Progress Overview
 
 
 
-Purpose
+## Overall Progress  
+
+**95% Complete**
+
+[###############################—–] 95%
+
+## Completed Phases  
+
+| Phase | Description | Status |
+
+|------|-------------|--------|
+
+| Phase 1 | Full Magento product extraction | ✔️ Completed |
+
+| Phase 2 | HTML cleaning & parsing | ✔️ Completed |
+
+| Phase 3 | Image pipeline build | ✔️ Completed |
+
+| Phase 4 | Shopify CSV generation | ✔️ Completed |
+
+| Phase 5 | Shopify product import | ✔️ Completed |
+
+| Phase 6 | Page scraping + Liquid content prep | ✔️ Completed |
+
+| Phase 7 | Page import to Shopify | ✔️ Completed |
+
+| Phase 8 | Product → Collection mapping | ✔️ Final import running |
 
 
 
-This documentation exists to keep stakeholders, developers, and QA aligned through the migration.
-
-All progress updates will appear here as the project evolves.
+---
 
 
 
-⸻
+# Auto-Updating Task List  
 
+(Updates whenever these files are edited)
+
+
+
+- [x] Extract Magento products  
+
+- [x] Generate Shopify-ready CSV  
+
+- [x] Import products into Shopify  
+
+- [x] Prepare page HTML  
+
+- [x] Import pages into Shopify  
+
+- [x] Build collection mapping  
+
+- [ ] Finalise product → collection assignment  
+
+- [ ] Perform final validation  
+
+- [ ] Launch staging review  
+
+
+
+---
+
+
+
+# Latest Updates  
+
+See the internal technical migration log for detailed steps:  
+
+→ [Internal Migration Report](./INTERNAL_TECH_MIGRATION_PROGRESS.md)
+
+
+
+---

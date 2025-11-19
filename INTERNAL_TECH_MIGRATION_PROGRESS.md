@@ -116,61 +116,29 @@ Phase 7 – Liquid Directive Rewriter
 
 
 
-Phase 8 – The Hydra Phase (Collection System)
+Phase 8 — Shopify Collection Assignment (SKU-mapped)  
 
+Status: COMPLETE  
 
+Deliverables:  
 
-Initial Matching Attempts
+- SKU deterministic matching implemented  
 
+- 265/265 Shopify products successfully matched  
 
+- Collection map extracted from Magento category structure  
 
-Handle-based fuzzy matching → inconsistent.
+- 176/177 products assigned across all matching Shopify collections  
 
+- 1 product reported with no Magento category (espresso-1000g)  
 
+- Verified via micro-run assignment & validation  
 
-Final Selected Approach: SKU Deterministic Matching
+- No further script changes required  
 
-	•	Shopify products fetched via API
+---  
 
-	•	Matched 1-to-1 by SKU to Magento products
-
-	•	SKU assignments used to rebuild collection mapping
-
-	•	100% match rate
-
-
-
-Scripts created:
-
-	•	phase8_sku_map_products.js
-
-	•	phase8_sku_extract_collections.js
-
-	•	phase8_sku_import_assignments.js
-
-
-
-Outputs:
-
-	•	phase8_sku_matched_products.json
-
-	•	phase8_sku_final_assignments.json
-
-
-
-Results:
-
-	•	265 total products
-
-	•	177 assigned to collections
-
-	•	454 total collection assignments
-
-	•	88 products intentionally unassigned (not in Magento categories)
-
-
-
-⸻
+Phase 9:
 
 
 
