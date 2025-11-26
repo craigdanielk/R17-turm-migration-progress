@@ -1,166 +1,170 @@
-Turm Kaffee Migration Summary
-
+R17 • Turm Kaffee Migration Progress Report
 Magento → Shopify Migration
 
 Status: In Progress
+Updated: Current Sprint
 
+Project Overview
 
+This report outlines the full migration of Turm Kaffee’s Magento storefront into Shopify, covering completed tasks, current progress, and remaining deliverables required to activate the new Shopify Flow-theme site.
 
-1. Overview
+The migration objective is functional parity with UX/visual modernisation, not a 1:1 replica of the old Magento UI.
 
-
-
-This document summarises the full migration of Turm Kaffee's Magento store to Shopify.
-
-It covers what has been completed, what is in progress, and what remains before launch.
-
-
-
-2. Completed Work
-
-
-
+1. Completed Work
 Product Migration
 
-	•	All products exported from Magento
+All core product data has been fully extracted, transformed, validated, and migrated.
 
-	•	All metadata, descriptions, variants and SKU structures parsed and cleaned
+Highlights
 
-	•	Shopify-ready CSV generated and imported
-
-	•	All products now live inside Shopify
-
-
+✔ Full Magento product catalogue exported
+✔ Metadata, variant structures, SKU rules, content blocks — parsed & cleaned
+✔ Shopify-ready CSV generated and validated
+✔ All products successfully imported into Shopify
+✔ Images mapped and assigned to correct variants
 
 Page Migration
 
-	•	199 Magento HTML pages scraped
+The complete Magento CMS content layer has been processed.
 
-	•	Cleaned and converted to Shopify-compatible HTML
+Highlights
 
-	•	191 pages created automatically
-
-	•	7 pages updated using retry logic
-
-	•	2 pages manually recreated
-
-
+✔ 199 Magento HTML pages scraped
+✔ Content converted to Shopify-compatible HTML
+✔ 191 pages automatically generated
+✔ 7 pages repaired via retry logic
+✔ 2 pages manually recreated (structural exceptions)
 
 Image Processing
 
-	•	All products and content images crawled
+✔ All product & content images crawled
+✔ Normalised for Shopify CDN
+✔ High-resolution paths identified for import
+✔ Image-set mapping prepared for Flow theme
 
-	•	Internal images rewritten to Shopify CDN
+2. Work in Progress
+Store Structure Mapping
 
-	•	External/missing file audit generated
+Rebuilding Shopify’s information architecture based on the Magento hierarchy.
 
+Tasks Underway
 
+• Extracting Magento category tree
+• Mapping categories → Shopify automated collections
+• Identifying reusable custom blocks or widgets
+• Documenting dependencies between categories, products, URLs
 
-Collection Migration
+Theme Integration (Flow Theme)
 
-	•	Magento categories analysed and normalised
+Analysing the Flow theme capabilities to align content, blocks, and metafields.
 
-	•	Shopify collections generated
+Tasks Underway
 
-	•	Final product–collection mapping rebuilt using SKU deterministic matching
+• Mapping Magento content → Flow sections
+• Identifying new opportunities:
+– content blocks
+– product info modules
+– dynamic metafield-driven components
+• Defining page-level layout logic
 
-	•	All collections created and products assigned
+Data Normalisation
 
+Meta-layer cleanup before final import.
 
+Tasks Underway
 
-Phase 8: Product–Collection Mapping  
+• Metafield namespace & key cleanup
+• Deduplicating values
+• Mapping category_ids to modern Shopify collection logic
+• Preparing Matrixify import for metafields
 
-Status: Complete  
+3. Next Steps
+Immediate Priorities
+A. Pull & Analyse Remaining Magento Data
 
-Notes:  
+• Category tree
+• URL rewrites
+• CMS blocks & widgets
+• Discounts / promotions
+• Inventory
+• Search terms
+• Review data
 
-- 265 Shopify products mapped to Magento products by SKU (100% match rate)  
+(This will be automated through the batch.sh pull sequence.)
 
-- 177 products with valid Magento category mappings assigned to their collections  
+B. Complete Metafield Definitions & Import
 
-- 88 products correctly identified as having no collection in Magento  
+• Finalise all product metafield definitions
+• Validate types
+• Bulk-import via Matrixify
+• Confirm theme integration with Flow
 
-- Single product skipped: `espresso-1000g` (no collection defined in Magento source data)  
+C. Rebuild Shopify Navigation
 
-- Mapping integrity verified through deterministic SKU-based resolution  
+• Derive top-level navigation from category tree
+• Map CMS pages to Flow theme
+• Build footer navigation, legal pages, contact pages
 
-- Final mapping validated; system now structurally accurate  
+D. Recreate Collections System
 
----  
+• Automated collections (e.g., kaffe → arabica level, roast levels)
+• Manual collections for curated sets
+• Apply metafields for category_ids if useful
 
-Phase 9:
+E. Implement Tracking & Marketing Tech
 
+• GA4
+• Google Ads conversions
+• Meta Pixel
+• Klaviyo onsite events
 
+4. Launch-Phase Tasks
+Polish & QA
 
-Theme Analysis
+• Full mobile & desktop review
+• Theme block refinement
+• Product content spacing & formatting
+• Fix broken links
+• Verify SEO structure
+• Check URL rewrite mapping
 
-	•	Theme fully analysed
+Technical QA
 
-	•	Missing page templates identified
+• Inventory sync
+• Checkout flow validation
+• Payments configuration
+• Shipping rules
+• Tax configuration (CH + EU handling)
 
-	•	Template migration plan created
+Content QA
 
+• CMS layouts
+• Product descriptions
+• Metafield-driven sections
+• Navigation logic
+• Image quality control
 
+5. Project Principles
+Functional Parity First
 
-3. Work in Progress
+Replicate what matters in Magento — improve everything else.
 
+Modern Shopify Implementation
 
+Use Flow theme features, not legacy Magento patterns.
 
-Product Assignments
+Scalable Architecture
 
+Structured metafields, collections, and content blocks must support future product expansion.
 
+Automation Wherever Possible
 
-Some products require confirmation due to Magento data inconsistencies.
+Matrixify + n8n + internal tooling used to minimise manual labour.
 
-Automated retry running.
+6. Summary
 
-Manual confirmation list prepared.
+The migration has passed the major technical milestones: product import, page processing, and asset transformation.
+The next sprints focus on: Magento data extraction, Shopify structural rebuild, Flow theme integration, and metafield import.
 
-
-
-Theme Template Setup
-
-	•	German templates
-
-	•	Utility pages (dailydeals, result, kurse, tee, baristatools, zubehoer, maschinen)
-
-
-
-Navigation
-
-	•	Rebuilding Shopify navigation to match Magento structure
-
-
-
-4. Next Steps
-
-	1.	Finalise product–collection assignments
-
-	2.	Generate all missing theme templates
-
-	3.	Import content blocks
-
-	4.	Rebuild navigation
-
-	5.	Full QA pass
-
-	6.	Performance audit
-
-	7.	Launch prep
-
-
-
-5. Final Deliverables
-
-	•	Fully migrated Shopify store
-
-	•	All collections + products mapped
-
-	•	All Magento pages recreated
-
-	•	Navigation aligned
-
-	•	Custom templates integrated
-
-	•	Ready for client QA
+Once the remaining data is normalised and the theme is populated, the final QA and tracking layer will position Turm Kaffee for a smooth, modern, scalable Shopify go-live.
 
